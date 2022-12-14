@@ -18,6 +18,10 @@ of rate limitations.
 
 ## Lab-Session 2 (6/12/2022)
 
+Skipped.
+
+## Lab-Session 3 (20/12/2022)
+
 Having set up a way to find repositories on GitHub that
 fulfil a certain search criteria (in the previous lab session),
 this lecture focuses on the in-depth extraction of data from repositories 
@@ -73,7 +77,5 @@ Test your implementation on the test-repository. Hereafter, let it run on our re
 Plot the number of fixes over time.
 
 The first official assignment will be an extended version of the content of this lab session.
-
-## Lab-Session 3 (20/12/2022)
 
 ## ...
