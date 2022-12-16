@@ -47,7 +47,7 @@ The following repositories need to be analyzed
 
 Extract the following set of metrics for each repository (the lab-session is limited to the first metric):
 
-| ID  | Descripton                                                                                                                                                             | Part of          |
+| ID  | Description                                                                                                                                                             | Part of          |
 |-----|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------|
 | LOC | Number of lines of code in artifact `a`, at the commit `c` which is closes to the end of time window `w` (before the end of `w`, but not necessarily included in `w`). | Assignment + Lab-session |
 | CC  | Cyclomatic complexity (in analogy to LOC).                                                                                                                             | Assignment       |
@@ -110,6 +110,6 @@ Stick to the following **top-level file structure** of the zip:
 - `README.md` (describing your approach)
 
 Code quality (clarity) and your tests may be considered in the 
-evaluation. The deadline for the assignment is the **26th of June 2022**.
+evaluation. The deadline for the assignment is the **26th of June 2023**.
 
 ## ...
