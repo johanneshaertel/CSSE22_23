@@ -112,4 +112,43 @@ Stick to the following **top-level file structure** of the zip:
 Code quality (clarity) and your tests may be considered in the 
 evaluation. The deadline for the assignment is the **26th of June 2023**.
 
-## ...
+## Lab-Session 4 (14/1/2023)
+
+In this session, we will demonstrate how to build a small classifier manually.
+We will rely on a basic grid-search for parameters. We will also show some advanced methods
+on how to continue from such basic classifier.
+We will only use simulated data, i.e., feature and defects
+produced by random number generators. This helps to assure that our
+implementation is correct. As output, we will
+produce a function that is capable to predict defects using the features.
+Keep in mind that the function will not work in reality, since
+we fitted it on simulated "fake" data. However, we can now easily
+take our model fitting code and run it on real data.
+
+We split the demonstration into three parts.
+
+- We start implementing a simple logistic regression classifier, not using any features.
+Code can already be found [here](lab4/tutorial1.py).
+
+- We add one features that is used as a predictor. Code can be found [here](lab4/tutorial2.py).
+
+- Finally, we reuse a python library to build the same classifier. Code can be found [here](lab4/tutorial3.py).
+
+We will also go through a series of options to implement such classifier for realistic problems.
+We show a list of visual demos. The code for the demos does not need to be understood.
+
+- We show a visual introduction to **grid-search**. It  corresponds to the solutions
+that we have previously implemented in the first part of the tutorial. This solution 
+is inefficient.
+Code can be found [here](lab4/demo1_grid_nonlog.R) and [here](lab4/demo2_grid_log.R).
+
+- We show a visual introduction to **maximum likelihood estimation**, and how to get
+insights on the shape of the likelihood by quadratic approximation.
+Code can be found [here](lab4/demo3_ml_hill_log.R), [here](lab4/demo4_ml_curvature_log.R) and
+[here](lab4/demo5_ml_curvature_nonlog.R).
+
+- We show a visual introduction to **Metropolis Hastings**.
+Code can be found [here](lab4/demo6_metropolishastings_unlog.R) and [here](lab4/demo4_ml_curvature_log.R).
+
+- We show a visual introduction to **Hamiltonian Monte Carlo**.
+Code can be found [here](lab4/demo7_hamiltonian_log.R) and [here](lab4/demo8_hamiltonian_fast_log.R).
