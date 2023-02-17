@@ -112,7 +112,7 @@ Stick to the following **top-level file structure** of the zip:
 Code quality (clarity) and your tests may be considered in the 
 evaluation. The deadline for the assignment is the **26th of June 2023**.
 
-## Lab-Session 4 (14/1/2023)
+## Lab-Session 4 (14/2/2023)
 
 In this session, we will demonstrate how to build a small classifier manually.
 We will rely on a basic grid-search for parameters. We will also show some advanced methods
@@ -128,11 +128,11 @@ take our model fitting code and run it on real data.
 We split the demonstration into three parts.
 
 - We start implementing a simple logistic regression classifier, not using any features.
-Code can already be found [here](lab4/tutorial1.py).
+Code can already be found [here](lab4/tutorial_1.py).
 
-- We add one features that is used as a predictor. Code can be found [here](lab4/tutorial2.py).
+- We add one features that is used as a predictor. Code can be found [here](lab4/tutorial_2.py).
 
-- Finally, we reuse a python library to build the same classifier. Code can be found [here](lab4/tutorial3.py).
+- Finally, we reuse a python library to build the same classifier. Code can be found [here](lab4/tutorial_3.py).
 
 We will also go through a series of options to implement such classifier for realistic problems.
 We show a list of visual demos. The code for the demos does not need to be understood.
@@ -152,3 +152,80 @@ Code can be found [here](lab4/demo6_metropolishastings_unlog.R) and [here](lab4/
 
 - We show a visual introduction to **Hamiltonian Monte Carlo**.
 Code can be found [here](lab4/demo7_hamiltonian_log.R) and [here](lab4/demo8_hamiltonian_fast_log.R).
+
+## (DRAFT) Lab-Session 5 and Assignment 2 (20/2/2023)
+
+In the second assignment, you need to find out if *data balancing* techniques are worth the effort.
+In a nutshell, you need to train a classifier on data sets and
+evaluate the classifier's performance using different performance metrics. However, the classifier must be trained
+on a balanced and on an unbalanced version of the data. Cross-validation practice should be followed rigorously to 
+prevent over- and under-fitting. 
+
+### Experiment:
+
+The following steps describe the process in detail:
+
+- Do the following for all datasets.
+  - Scale the features of the data set. For each feature, apply one of the most common ways of normalization, i.e.,
+    - subtracting the mean
+    - and dividing by the standard deviation.
+  - Split the data set into test and train set multiple times. 
+    - From now on, fitting the model and evaluation of prediction
+    needs to be strictly separated.
+    - Explore the two alternatives (keep in mind that the test set keeps as it is):
+      - Apply a class balancing technique to the train set.
+      - Keep the train set as it is.
+    - Train the classifiers on the train set.
+    - Evaluate the classifier on the test set using the performance metrics.
+
+The following **data sets** need to be used. The data can be found [here](lab5/data).
+- There are five data set of real systems, i.e., ant, camel, jedit, log4j and lucene.
+- There are three simulated data sets, one with low, one with balanced, and one with high
+relative defect count.
+
+The following **performance metrics** should be explored:
+- Precision
+- Recall
+- Accuracy
+- Matthew Correlation Coefficient (MCC)
+- F-Measure
+- Relative entropy or Kullback–Leibler divergence.
+
+Keep in mind that the relative entropy is a metric between probability distributions, so
+you need to use the probabilities given by the logistic regression. For sklearn's logistic regression
+you may need to change `predict` to `predict_proba`.
+
+The **balancing technique** that you should use is:
+- No balancing.
+- Synthetic Minority Over-sampling Technique [(SMOTE)](https://imbalanced-learn.org/stable/over_sampling.html#from-random-over-sampling-to-smote-and-adasyn)
+
+The **classifier** that you should use is:
+- Logistic Regression
+
+### Results:
+
+We recommend storing the results in a single dataframe, with columns storing:
+- the name of the dataset,
+- the name of the used balancing technique,
+- the name of the performance metric 
+- the value of the performance metrics
+- a running index for each split in the cross-validation
+
+### Discussion:
+
+After producing the results, visualize it appropriately, and draw a
+conclusion for the experiment, explaining if this experiment provides any
+evidence for recommending balancing. Try to consider the relative number of defects
+in a dataset in our interpretation.
+
+### Deliverables
+
+The deliverables must be uploaded to Canvas as a zip archive. 
+Assure that the following artifacts are included in your submission (you may submit a notebook if you like):
+
+- **scripts** needed to run your experiment. 
+- **data** that is the result of your experiment with understandable naming as CSV
+- **plots** that you created
+- **interpretation** of your resulting data.
+
+The deadline for the assignment is the 26th of June 2023.
