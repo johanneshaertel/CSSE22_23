@@ -227,5 +227,6 @@ Assure that the following artifacts are included in your submission (you may sub
 - **data** that is the result of your experiment with understandable naming as CSV
 - **plots** that you created
 - **interpretation** of your resulting data.
+- Sufficiently **commented** code (potentially in the notebook) so that we can understand what you are doing.
 
 The deadline for the assignment is the 26th of June 2023.
