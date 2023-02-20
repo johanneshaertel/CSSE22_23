@@ -153,7 +153,18 @@ Code can be found [here](lab4/demo6_metropolishastings_unlog.R) and [here](lab4/
 - We show a visual introduction to **Hamiltonian Monte Carlo**.
 Code can be found [here](lab4/demo7_hamiltonian_log.R) and [here](lab4/demo8_hamiltonian_fast_log.R).
 
-## (DRAFT) Lab-Session 5 and Assignment 2 (20/2/2023)
+## Lab-Session 5 (20/2/2023)
+
+This lab session will present assignment 2,
+discuss some workaround related to the missing
+functionality of Pydriller, and conduct an in-depth
+introduction to the problem of over-fitting and
+how to solve it using cross-validation.
+
+The code on cross-validation can be found [here](lab5/cv.ipynb).
+The slides will be uploaded soon.
+
+## Assignment 2 (20/2/2023)
 
 In the second assignment, you need to find out if *data balancing* techniques are worth the effort.
 In a nutshell, you need to train a classifier on data sets and
