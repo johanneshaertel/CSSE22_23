@@ -31,7 +31,7 @@ the extraction.
 This lab-session will start with the basics on this task.
 The upcoming assignment requires extracting **additional metrics**,
 and to run your extraction 
-for **additional repositories**. You are **allowed to use the code developed
+for **additional repositories**. You are **allowed to use the [code](lab3/scripts/extractor.py) developed
 in the lab-session**. You need to extend it for the submitted assignment.
 
 The following repositories need to be analyzed
@@ -57,7 +57,7 @@ Extract the following set of metrics for each repository (the lab-session is lim
 
 You are supposed to **follow these guidelines**:
 
-1. **Test-repository:** Create a public GitHub repository
+1. **Test-repository (Optional, as discussed in the lab-session):** Create a public GitHub repository
 on which your implementation of the extraction can be tested.
 Create tests for the relevant technical parts of your extraction (each metric), 
 by faking a small Java project in your test-repository.
@@ -109,7 +109,7 @@ Stick to the following **top-level file structure** of the zip:
 - `data` folder (the 5 data sets for a time window of your choice)
 - `README.md` (describing your approach)
 
-Code quality (clarity) and your tests may be considered in the 
+Code quality (clarity) may be considered in the 
 evaluation. The deadline for the assignment is the **26th of June 2023**.
 
 ## Lab-Session 4 (14/2/2023)
@@ -162,7 +162,7 @@ introduction to the problem of over-fitting and
 how to solve it using cross-validation.
 
 The code on cross-validation can be found [here](lab5/cv.ipynb).
-The slides will be uploaded soon.
+The slides on cross-validation can be found [here](lab5/CSSE_testing_models.pdf).
 
 ## Assignment 2 (20/2/2023)
 
