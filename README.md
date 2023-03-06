@@ -241,3 +241,61 @@ Assure that the following artifacts are included in your submission (you may sub
 - Sufficiently **commented** code (potentially in the notebook) so that we can understand what you are doing.
 
 The deadline for the assignment is the 26th of June 2023.
+
+
+## Lab-Session 6 (7/3/2023)
+
+This lab session will present assignment 3.
+
+We will also have a look at how to implement logistic and linear regression in the
+probabilistic programming language [STAN](https://mc-stan.org/).
+The code will be uploaded soon.
+
+## Assignment 3 (7/3/2023)
+
+In the third assignment, you need to compare different classifiers
+for defect prediction.
+Split the data set into train and test data. Train the classifier on the train set and evaluate it on the test set.
+Use the probabilities produces (use `predict_proba`) and the [Brier score](https://en.wikipedia.org/wiki/Brier_score) metric.
+
+### Experiment
+
+Use the following two classifiers:
+1. sklearn.linear_model.LogisticRegression
+2. sklearn.neural_network.MLPClassifier
+
+For the neuronal network, experiment with different structures for the hidden layers and values for the alpha parameter.
+Alpha is used to prevent over-fitting. Use the default solver. You may need to increase the number of iterations.
+
+Apply this to the following data sets:
+1. [lucene-2.4.csv](lab5/data/lucene-2.4.csv)
+2. [sim_balanced.csv](lab5/data/sim_balanced.csv)
+
+Use Monte Carlo cross validation:
+
+```python
+import numpy as np
+
+half = int(np.ceil(len(X) / 2))
+indices = np.random.permutation(X.shape[0])
+train, test = indices[:half], indices[half:]
+
+X_train, y_train, X_test, y_test = X.iloc[train], y[train], X.iloc[test], y[test]
+```
+
+### Discussion
+Visualize and interpret the performance with respective the data sets and the classifier. You may also conclude
+on the properties of the neuronal network, e.g., on differences in the hidden layers and in alpha.
+
+### Deliverables
+
+The deliverables must be uploaded to Canvas as a zip archive.
+Assure that the following artifacts are included in your submission (you may submit a notebook if you like):
+
+- **scripts** needed to run your experiment.
+- **data** that is the result of your experiment with understandable naming as CSV
+- **plots** that you created
+- **interpretation** of your resulting data.
+- Sufficiently **commented** code (potentially in the notebook) so that we can understand what you are doing.
+
+The deadline for the assignment is the 26th of June 2023.
