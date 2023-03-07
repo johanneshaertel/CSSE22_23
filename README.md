@@ -26,7 +26,7 @@ This lab-session, and the assignment introduced in the lab-session,
 requires building a data set for defect prediction.
 We limit the data set to repositories with *Java* as the primary programming language,
 and use [PyDriller](https://pydriller.readthedocs.io/) for implementing
-the extraction.
+the extraction. Filter on Java resources.
 
 This lab-session will start with the basics on this task.
 The upcoming assignment requires extracting **additional metrics**,
