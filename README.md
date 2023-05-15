@@ -282,6 +282,7 @@ train, test = indices[:half], indices[half:]
 
 X_train, y_train, X_test, y_test = X.iloc[train], y[train], X.iloc[test], y[test]
 ```
+Predict the bug variables using all other variables contained in the data set.
 
 ### Discussion
 Visualize and interpret the performance with respective the data sets and the classifier. You may also conclude
